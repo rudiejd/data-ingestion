@@ -2,7 +2,6 @@ from typing import Dict, Optional, Tuple
 import requests
 import json
 import boto3
-from keys import YANKEE_API_KEY
 from botocore.exceptions import ClientError
 from datetime import datetime
 from tempfile import TemporaryDirectory
@@ -11,6 +10,7 @@ import s3
 from ddtrace import tracer
 from dataclasses import dataclass
 from chalicelib import dynamo
+from chalicelib.keys import YANKEE_API_KEY
 
 from typing import List
 from sqlalchemy.orm import Session
