@@ -376,4 +376,6 @@ def update_shuttles():
     shuttle_shapes = get_shuttle_shapes(session)
     shuttle_stops = get_shuttle_stops(session)
 
-    _update_shuttles(last_bus_positions, shuttle_shapes, shuttle_stops)
+    shuttle_positions = _update_shuttles(last_bus_positions, shuttle_shapes, shuttle_stops)
+    save_bus_positions(shuttle_positions)
+
